@@ -74,10 +74,7 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> SourceCountryLookup",
-				"SourcePopulation derive(age_group = \r",
-				"\r",
-				"\r",
-				"substringIndex(replace({indic_de,geo\\time}, \"PC_\", \"\"), \",\", 1),",
+				"SourcePopulation derive(age_group = substringIndex(replace({indic_de,geo\\time}, \"PC_\", \"\"), \",\", 1),",
 				"          country_code = substring(substringIndex(replace({indic_de,geo\\time}, \"PC_\", \"\"), \",\", -1)\r",
 				", 1, 2),",
 				"          percentage_2019 = regexReplace({2019 },  ':|[a-z]', '')) ~> DerivedCountryCode",
@@ -101,8 +98,7 @@
 				"          country_code_3_digit,",
 				"          population),",
 				"     pivotBy(age_group, ['PC_Y0_14', 'Y15_24', 'Y25_49', 'Y50_64', 'Y65_79', 'Y80_MAX']),",
-				"     group = sum(toDouble(percentage_2019))\r",
-				",",
+				"     group = sum(toDouble(percentage_2019)),",
 				"     columnNaming: '$V_$N',",
 				"     lateral: true) ~> PivoteByAgeGroup",
 				"PivoteByAgeGroup select(mapColumn(",
@@ -121,12 +117,14 @@
 				"     skipDuplicateMapOutputs: true) ~> SelectSinkFields",
 				"SelectSinkFields sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
+				"     partitionFileNames:[''],",
 				"     truncate: true,",
 				"     umask: 0022,",
 				"     preCommands: [],",
 				"     postCommands: [],",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> Sinkpopulation"
+				"     skipDuplicateMapOutputs: true,",
+				"     partitionBy('hash', 1)) ~> Sinkpopulation"
 			]
 		}
 	}
