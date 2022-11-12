@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "Covid-19-ADF-7132"
+		},
+		"ls_ablob_covid_19_sa_connectionString": {
+			"value": ""
+		},
+		"ls_adls_covid_19_dl_accountKey": {
+			"value": ""
+		},
+		"ls_adls_covid_19_dl_properties_typeProperties_url": {
+			"value": "https://covid19datalake7132.dfs.core.windows.net/"
+		},
+		"ls_http_git_oendata_ecdc_properties_typeProperties_url": {
+			"value": "@{linkedService().sourceBaseURL}"
+		},
+		"tr_ingest_population_data_properties_typeProperties_scope": {
+			"value": "/subscriptions/b70114fd-1f01-4ae0-a331-3350a98201f0/resourceGroups/Covid-19-project/providers/Microsoft.Storage/storageAccounts/covid19storagaccount7132"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
