@@ -117,7 +117,7 @@
 				"     skipDuplicateMapOutputs: true) ~> SelectSinkFields",
 				"SelectSinkFields sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     partitionFileNames:[''],",
+				"     partitionFileNames:['population.csv'],",
 				"     truncate: true,",
 				"     umask: 0022,",
 				"     preCommands: [],",
