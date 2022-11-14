@@ -25,7 +25,7 @@
 						"referenceName": "ds_processed_population",
 						"type": "DatasetReference"
 					},
-					"name": "Sinkpopulation"
+					"name": "SinkPopulation"
 				}
 			],
 			"transformations": [
@@ -124,7 +124,7 @@
 				"     postCommands: [],",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     partitionBy('hash', 1)) ~> Sinkpopulation"
+				"     partitionBy('hash', 1)) ~> SinkPopulation"
 			]
 		}
 	}
