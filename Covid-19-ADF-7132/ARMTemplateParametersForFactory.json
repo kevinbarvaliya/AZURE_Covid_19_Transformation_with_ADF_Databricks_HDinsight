@@ -11,6 +11,9 @@
 		"ls_adls_covid_19_dl_accountKey": {
 			"value": ""
 		},
+		"ls_sql_covid_db_connectionString": {
+			"value": ""
+		},
 		"ls_adls_covid_19_dl_properties_typeProperties_url": {
 			"value": "https://covid19datalake7132.dfs.core.windows.net/"
 		},
