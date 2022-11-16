@@ -27,7 +27,7 @@
 			"type": "string",
 			"defaultValue": "@{linkedService().sourceBaseURL}"
 		},
-		"trigger1_properties_typeProperties_scope": {
+		"tr_population_data_arrived_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/b70114fd-1f01-4ae0-a331-3350a98201f0/resourceGroups/Covid-19-project/providers/Microsoft.Storage/storageAccounts/covid19storagaccount7132"
 		},
@@ -91,8 +91,8 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"trigger1_properties_typeProperties_scope": {
-						"value": "[parameters('trigger1_properties_typeProperties_scope')]"
+					"tr_population_data_arrived_properties_typeProperties_scope": {
+						"value": "[parameters('tr_population_data_arrived_properties_typeProperties_scope')]"
 					}
 				}
 			},

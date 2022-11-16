@@ -20,7 +20,7 @@
 		"ls_http_git_oendata_ecdc_properties_typeProperties_url": {
 			"value": "@{linkedService().sourceBaseURL}"
 		},
-		"trigger1_properties_typeProperties_scope": {
+		"tr_population_data_arrived_properties_typeProperties_scope": {
 			"value": "/subscriptions/b70114fd-1f01-4ae0-a331-3350a98201f0/resourceGroups/Covid-19-project/providers/Microsoft.Storage/storageAccounts/covid19storagaccount7132"
 		},
 		"containerUri": {
